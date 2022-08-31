@@ -433,7 +433,7 @@
     }
 
     .ud-home-info button {
-        padding: 10px 30px;
+        padding: 15px 30px;
         font-size: 16px;
     }
 }
@@ -451,7 +451,7 @@
     }
 
     .ud-home-info button {
-        padding: 6px 15px;
+        padding: 10px 20px;
         font-size: 13px;
     }
 
@@ -533,6 +533,7 @@
      min-width: 150px;
      position: relative;
      height: 250px;
+     scroll-snap-align: center;
  }
 
  .ud-events-section-header {
@@ -543,13 +544,17 @@
  }
 
  .ud-events-container {
-     width: 85%;
+     width: 100%;
      padding: 30px 0;
      display: flex;
      align-items: center;
-     justify-content: center;
-     overflow: hidden;
+     scroll-snap-type: x mandatory;
+     overflow-x: scroll;
      gap: 70px;
+ }
+
+ .ud-events-container::-webkit-scrollbar {
+     display: none;
  }
 
  .ud-events-date {
@@ -645,7 +650,8 @@
  .ud-angle-left, .ud-angle-right {
      width: 45px;
      height: 45px;
-     border: 2px solid black;
+     /* border: 2px solid black; */
+     background-color: white;
      border-radius: 50%;
      display: flex;
      justify-content: center;
@@ -654,12 +660,13 @@
      font-weight: bold;
      position: absolute;
      top: 50%;
+     right: 40px;
      transition: .2s;
  }
 
  .ud-angle-left:hover, .ud-angle-right:hover {
      background-color: var(--gray);
-     border: 2px solid var(--gray);
+     /* border: 2px solid var(--gray); */
      color: white;
      transition: .2s;
  }
@@ -1231,7 +1238,8 @@
 
     /* footer section */
     .ud-footer {
-        background-color: var(--purple);
+        /* background-color: var(--purple); */
+        background-color: #3a3a3a;
         width: 100%;
         padding: 50px 0;
         display: flex;
@@ -1275,15 +1283,16 @@
 
     .ud-footer-form input, .ud-footer-form textarea {
         border: none;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-radius: 7px;
         width: 250px;
         outline: none;
-        padding: 15px 40px;
+        padding: 5px 10px;
+        height: 40px;
     }
 
     .ud-footer-form textarea {
-        height: 75px;
+        height: 80px;
         font-family: Poppins;
     }
 
@@ -1301,6 +1310,12 @@
 
     .ud-footer-social-icon {
         height: 70px;
+        transition: .2s;
+    }
+
+    .ud-footer-social-icon:hover {
+        transform: scale(1.1);
+        transition: .2s;
     }
 
     @media only screen and (max-width: 1196px) {
@@ -1323,8 +1338,9 @@
         .ud-footer-info {
             flex-direction: column-reverse;
             justify-content: center;
-            align-items: center;
+            margin: auto;
             margin-bottom: 20px;
+            width: 250px;
         }
 
         .ud-footer-form input, .ud-footer-form textarea {
@@ -1335,10 +1351,6 @@
 
         .ud-footer-form input::placeholder, .ud-footer-form textarea::placeholder {
             font-size: 14px;
-        }
-
-        .ud-form-title {
-            text-align: center;
         }
     
         .ud-footer-social-icon {
