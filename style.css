@@ -139,7 +139,7 @@
     .ud-nav nav ul {
         position: absolute;
         flex-direction: column;
-        top: 78px;
+        top: 52px;
         height: 0;
         overflow: hidden;
         padding: 0;
@@ -883,7 +883,7 @@
     }
 
     .ud-conducive-btn {
-        padding: 5px 20px;
+        padding: 10px 25px;
         font-size: 14px;
     }
 }
