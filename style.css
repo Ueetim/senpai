@@ -16,6 +16,7 @@
 
  button {
      font-family: Poppins;
+     outline: none !important;
  }
 
  .ud-container {
@@ -46,10 +47,10 @@
  /* nav section starts */
  .ud-nav {
      background-color: white;
-     height: 74px;
+     height: 50px;
      padding: 10px;
      display: flex;
-     align-items: flex-start;
+     align-items: center;
      justify-content: center;
      width: 100%;
      position: fixed;
@@ -156,7 +157,7 @@
 
     .ud-check {
         display: block;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .ud-nav nav input[type="checkbox"]:checked ~ .ud-nav-list {
@@ -509,10 +510,12 @@
 
     .ud-home-title {
         color: white;
+        margin: auto;
     }
 
     .ud-home-info-txt {
         color: #bdbdbd;
+        margin: 10px 0;
     }
 
     .ud-home-purple-txt {
@@ -880,8 +883,8 @@
     }
 
     .ud-conducive-btn {
-        padding: 5px 10px;
-        font-size: 16px;
+        padding: 5px 20px;
+        font-size: 14px;
     }
 }
 
@@ -1072,12 +1075,12 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     .ud-connect-title {
         text-align: center;
         font-size: 40px;
     }
-
+    
     .ud-connect-info {
         font-size: 23px;
         text-align: center;
@@ -1085,8 +1088,9 @@
         color: var(--gray-small);
         margin-top: -20px;
     }
-
+    
     .ud-connect-img {
+        border-radius: 5px;
         width: 100%;
         height: 400px;
         background-image: url("Images/edge.jpg");
@@ -1166,7 +1170,8 @@
         border-radius: 50%;
         background-image: url("Images/basketball-game.jpg");
         background-size: cover;
-        box-shadow: 0 0 20px 2px rgb(172, 172, 172);
+        background-position: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
     }
 
     .ud-balance-img2 {
