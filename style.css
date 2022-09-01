@@ -485,12 +485,25 @@
     }
 
     #ud-home-section {
-        background-image: url(Images/schoolgirl1.jpg);
+        background-position: center;
+        animation: bg 15s infinite ease-in;
         margin-bottom: 50px;
         background-color: rgb(22, 22, 22);
         background-size: cover;
         width: 100vw;
         background-blend-mode: overlay;
+    }
+
+    @keyframes bg {
+        0%, 100%, 25% {
+            background-image: url(Images/schoolgirl1.jpg);
+        }
+        33%, 58% {
+            background-image: url(Images/woman.jpg);
+        }
+        66%, 94% {
+            background-image: url(Images/img3.jpg);
+        }
     }
 
     .ud-home-title {
@@ -544,8 +557,8 @@
  }
 
  .ud-events-container {
-     width: 100%;
-     padding: 30px 0;
+     width: calc(100% - 90px);
+     padding: 30px 15px;
      display: flex;
      align-items: center;
      scroll-snap-type: x mandatory;
@@ -571,7 +584,17 @@
      color: white;
      background-color: var(--purple);
      transition: .15s;
-     box-shadow: 0 0 20px 2px rgb(140, 140, 140);
+     animation: shadow 2s ease-in infinite;
+
+ }
+
+ @keyframes shadow {
+     0%, 100% {
+        box-shadow: 0 0 0 0 #6765fb50;
+     }
+     50% {
+        box-shadow: 0 0 0 10px #6765fb50;
+     }
  }
 
  .ud-events-date p {
@@ -620,6 +643,7 @@
     top: 0;
     left: 0;
     transition: .15s;
+    animation: none;
     
 }
 
@@ -660,7 +684,6 @@
      font-weight: bold;
      position: absolute;
      top: 50%;
-     right: 40px;
      transition: .2s;
  }
 
@@ -672,11 +695,11 @@
  }
 
  .ud-angle-left {
-     left: 0;
+     left: -20px;
  }
 
  .ud-angle-right {
-     right: 0;
+     right: -20px;
  }
 
  /* events section ends */
@@ -1292,7 +1315,7 @@
     }
 
     .ud-footer-form textarea {
-        height: 80px;
+        height: 115px;
         font-family: Poppins;
     }
 
