@@ -156,6 +156,7 @@
 
     .ud-check {
         display: block;
+        font-size: 25px;
     }
 
     .ud-nav nav input[type="checkbox"]:checked ~ .ud-nav-list {
